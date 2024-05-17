@@ -1,6 +1,6 @@
 FROM alpine:3.19.1 as cloner
 
-ARG HEAD_REF=camcast/docker
+ARG HEAD_REF=camcast3/docker
 WORKDIR /repository
 RUN apk add --no-cache git
 RUN git clone https://github.com/camcast3/packwiz.git .
