@@ -18,7 +18,8 @@ FROM alpine:3.19.1 as app
 
 WORKDIR /workspace
 RUN apk add --no-cache bash
-COPY --chmod=755 --from=build /workspace/packwiz /usr/local/bin/
+COPY --chmod=755 --from=build /workspace/packwiz /packwiz
+
 VOLUME ["/data"]
 WORKDIR /data
 EXPOSE 8080
