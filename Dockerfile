@@ -14,7 +14,7 @@ RUN go mod download
 COPY --from=cloner /repository/ ./
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o packwiz main.go
 
-FROM alpine:3.20.1 as app
+FROM alpine:3.20.2 as app
 
 WORKDIR /workspace
 RUN apk add --no-cache bash
