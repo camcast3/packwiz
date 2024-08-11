@@ -1,4 +1,4 @@
-FROM alpine:3.20.1 as cloner
+FROM alpine:3.20.2 as cloner
 
 ARG HEAD_REF=camcast3/docker
 WORKDIR /repository
